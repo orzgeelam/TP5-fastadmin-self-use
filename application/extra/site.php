@@ -1,7 +1,7 @@
 <?php
 
 return array (
-  'name' => 'FastAdmin',
+  'name' => '商场全能圈',
   'beian' => '',
   'cdnurl' => '',
   'version' => '1.0.1',
@@ -23,10 +23,7 @@ return array (
   'configgroup' => 
   array (
     'basic' => 'Basic',
-    'email' => 'Email',
     'dictionary' => 'Dictionary',
-    'user' => 'User',
-    'example' => 'Example',
   ),
   'mail_type' => '1',
   'mail_smtp_host' => 'smtp.qq.com',
