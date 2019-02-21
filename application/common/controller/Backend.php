@@ -93,7 +93,7 @@ class Backend extends Controller
 		$modulename     = $this->request->module();
 		$controllername = strtolower($this->request->controller());
 		$actionname     = strtolower($this->request->action());
-		$path = str_replace('.', '/', $controllername).'/'.$actionname;
+		$path           = str_replace('.', '/', $controllername).'/'.$actionname;
 		// 定义是否Addtabs请求
 		!defined('IS_ADDTABS') && define('IS_ADDTABS', input("addtabs") ? true : false);
 		// 定义是否Dialog请求
@@ -110,7 +110,8 @@ class Backend extends Controller
 				Hook::listen('admin_nologin', $this);
 				$url = Session::get('referer');
 				$url = $url ? $url : $this->request->url();
-				$this->error(__('Please login first'), url('index/login', ['url' => $url]));
+				// $this->error(__('Please login first'), url('index/login', ['url' => $url]));
+				$this->redirect(url('index/login', ['url' => $url]));
 			}
 			// 判断是否需要验证权限
 			if (!$this->auth->match($this->noNeedRight)) {
@@ -145,8 +146,8 @@ class Backend extends Controller
 			$this->view->engine->layout('layout/'.$this->layout);
 		}
 		// 语言检测
-		$lang = strip_tags($this->request->langset());
-		$site = Config::get("site");
+		$lang   = strip_tags($this->request->langset());
+		$site   = Config::get("site");
 		$upload = \app\common\model\Config::upload();
 		// 上传信息配置后
 		Hook::listen("upload_config_init", $upload);

@@ -1,7 +1,7 @@
 <?php
 
 return array (
-  'name' => '商场全能圈',
+  'name' => 'FastAdmin',
   'beian' => '',
   'cdnurl' => '',
   'version' => '1.0.1',
@@ -13,16 +13,10 @@ return array (
     'frontend' => 'zh-cn',
   ),
   'fixedpage' => 'dashboard',
-  'categorytype' => 
-  array (
-    'default' => 'Default',
-    'page' => 'Page',
-    'article' => 'Article',
-    'test' => 'Test',
-  ),
   'configgroup' => 
   array (
     'basic' => 'Basic',
+    'weixin' => '微信配置',
     'dictionary' => 'Dictionary',
   ),
   'mail_type' => '1',
@@ -32,4 +26,9 @@ return array (
   'mail_smtp_pass' => 'password',
   'mail_verify_type' => '2',
   'mail_from' => '10000@qq.com',
+  'wechat_appid' => '',
+  'wechat_appsecret' => '',
+  'wechat_apptoken' => '',
+  'wechat_merchant_id' => '',
+  'wechat_key' => '',
 );
