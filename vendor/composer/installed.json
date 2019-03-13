@@ -1570,65 +1570,6 @@
         ]
     },
     {
-        "name": "topthink/framework",
-        "version": "v5.0.23",
-        "version_normalized": "5.0.23.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/top-think/framework.git",
-            "reference": "4cbc0b5e93314446243ebc7d5f005f9c32864737"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/top-think/framework/zipball/4cbc0b5e93314446243ebc7d5f005f9c32864737",
-            "reference": "4cbc0b5e93314446243ebc7d5f005f9c32864737",
-            "shasum": "",
-            "mirrors": [
-                {
-                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                    "preferred": true
-                }
-            ]
-        },
-        "require": {
-            "php": ">=5.4.0",
-            "topthink/think-installer": "~1.0"
-        },
-        "require-dev": {
-            "johnkary/phpunit-speedtrap": "^1.0",
-            "mikey179/vfsstream": "~1.6",
-            "phpdocumentor/reflection-docblock": "^2.0",
-            "phploc/phploc": "2.*",
-            "phpunit/phpunit": "4.8.*",
-            "sebastian/phpcpd": "2.*"
-        },
-        "time": "2018-12-09 12:40:40",
-        "type": "think-framework",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "think\\": "library/think"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache-2.0"
-        ],
-        "authors": [
-            {
-                "name": "liu21st",
-                "email": "liu21st@gmail.com"
-            }
-        ],
-        "description": "the new thinkphp framework",
-        "homepage": "http://thinkphp.cn/",
-        "keywords": [
-            "framework",
-            "orm",
-            "thinkphp"
-        ]
-    },
-    {
         "name": "symfony/options-resolver",
         "version": "v3.4.20",
         "version_normalized": "3.4.20.0",
@@ -1751,5 +1692,64 @@
         ],
         "description": "Symfony HttpFoundation Component",
         "homepage": "https://symfony.com"
+    },
+    {
+        "name": "topthink/framework",
+        "version": "v5.0.24",
+        "version_normalized": "5.0.24.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/top-think/framework.git",
+            "reference": "c255c22b2f5fa30f320ecf6c1d29f7740eb3e8be"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/top-think/framework/zipball/c255c22b2f5fa30f320ecf6c1d29f7740eb3e8be",
+            "reference": "c255c22b2f5fa30f320ecf6c1d29f7740eb3e8be",
+            "shasum": "",
+            "mirrors": [
+                {
+                    "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                    "preferred": true
+                }
+            ]
+        },
+        "require": {
+            "php": ">=5.4.0",
+            "topthink/think-installer": "~1.0"
+        },
+        "require-dev": {
+            "johnkary/phpunit-speedtrap": "^1.0",
+            "mikey179/vfsstream": "~1.6",
+            "phpdocumentor/reflection-docblock": "^2.0",
+            "phploc/phploc": "2.*",
+            "phpunit/phpunit": "4.8.*",
+            "sebastian/phpcpd": "2.*"
+        },
+        "time": "2019-01-11 08:04:58",
+        "type": "think-framework",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "think\\": "library/think"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "liu21st",
+                "email": "liu21st@gmail.com"
+            }
+        ],
+        "description": "the new thinkphp framework",
+        "homepage": "http://thinkphp.cn/",
+        "keywords": [
+            "framework",
+            "orm",
+            "thinkphp"
+        ]
     }
 ]

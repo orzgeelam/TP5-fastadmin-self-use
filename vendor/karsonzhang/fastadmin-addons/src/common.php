@@ -6,7 +6,9 @@ use think\Config;
 use think\Exception;
 use think\Hook;
 use think\Loader;
+use think\Request;
 use think\Route;
+use think\Url;
 
 // 插件目录
 define('ADDON_PATH', ROOT_PATH . 'addons' . DS);
@@ -320,7 +322,7 @@ function addon_url($url, $vars = [], $suffix = true, $domain = false)
     }
     $val = "@addons/{$url}";
     $config = get_addon_config($addon);
-    $dispatch = think\Request::instance()->dispatch();
+    $dispatch = Request::instance()->dispatch();
     $indomain = isset($dispatch['var']['indomain']) && $dispatch['var']['indomain'] ? true : false;
     $domainprefix = $config && isset($config['domain']) && $config['domain'] ? $config['domain'] : '';
     $rewrite = $config && isset($config['rewrite']) && $config['rewrite'] ? $config['rewrite'] : [];
@@ -352,7 +354,16 @@ function addon_url($url, $vars = [], $suffix = true, $domain = false)
             $vars[substr($k, 1)] = $v;
         }
     }
-    return url($val, [], $suffix, $domain) . ($vars ? '?' . http_build_query($vars) : '');
+    $module = Request::instance()->module();
+    if ($module !== 'index') {
+        $root = Request::instance()->root();
+        Url::root("/");
+    }
+    $url = url($val, [], $suffix, $domain) . ($vars ? '?' . http_build_query($vars) : '');
+    if ($module !== 'index') {
+        Url::root($root);
+    }
+    return $url;
 }
 
 /**
