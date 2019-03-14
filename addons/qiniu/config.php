@@ -119,7 +119,7 @@ return array (
     'content' => 
     array (
     ),
-    'value' => '/scqnq/$(year)$(mon)$(day)/$(etag)$(ext)',
+    'value' => '/ncgj/$(year)$(mon)$(day)/$(etag)$(ext)',
     'rule' => 'required',
     'msg' => '',
     'tip' => '',
