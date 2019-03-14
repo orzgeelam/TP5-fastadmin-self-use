@@ -13,20 +13,10 @@ return array (
     'frontend' => 'zh-cn',
   ),
   'fixedpage' => 'dashboard',
-  'categorytype' => 
-  array (
-    'default' => 'Default',
-    'page' => 'Page',
-    'article' => 'Article',
-    'test' => 'Test',
-  ),
   'configgroup' => 
   array (
     'basic' => 'Basic',
-    'email' => 'Email',
     'dictionary' => 'Dictionary',
-    'user' => 'User',
-    'example' => 'Example',
   ),
   'mail_type' => '1',
   'mail_smtp_host' => 'smtp.qq.com',
