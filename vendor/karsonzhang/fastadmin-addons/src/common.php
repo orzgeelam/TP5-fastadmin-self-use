@@ -6,9 +6,7 @@ use think\Config;
 use think\Exception;
 use think\Hook;
 use think\Loader;
-use think\Request;
 use think\Route;
-use think\Url;
 
 // 插件目录
 define('ADDON_PATH', ROOT_PATH . 'addons' . DS);
@@ -95,7 +93,7 @@ Hook::add('app_init', function () {
             Hook::exec($v, 'app_init');
         }
     }
-    Hook::import($hooks, true);
+    Hook::import($hooks, false);
 });
 
 /**
@@ -299,7 +297,7 @@ function get_addon_instance($name)
 
 /**
  * 插件显示内容里生成访问插件的url
- * @param string $url 地址 格式：插件名/控制器/方法
+ * @param $url 地址 格式：插件名/控制器/方法
  * @param array $vars 变量参数
  * @param bool|string $suffix 生成的URL后缀
  * @param bool|string $domain 域名
@@ -322,7 +320,7 @@ function addon_url($url, $vars = [], $suffix = true, $domain = false)
     }
     $val = "@addons/{$url}";
     $config = get_addon_config($addon);
-    $dispatch = Request::instance()->dispatch();
+    $dispatch = think\Request::instance()->dispatch();
     $indomain = isset($dispatch['var']['indomain']) && $dispatch['var']['indomain'] ? true : false;
     $domainprefix = $config && isset($config['domain']) && $config['domain'] ? $config['domain'] : '';
     $rewrite = $config && isset($config['rewrite']) && $config['rewrite'] ? $config['rewrite'] : [];
@@ -354,16 +352,7 @@ function addon_url($url, $vars = [], $suffix = true, $domain = false)
             $vars[substr($k, 1)] = $v;
         }
     }
-    $module = Request::instance()->module();
-    if ($module !== 'index') {
-        $root = Request::instance()->root();
-        Url::root("/");
-    }
-    $url = url($val, [], $suffix, $domain) . ($vars ? '?' . http_build_query($vars) : '');
-    if ($module !== 'index') {
-        Url::root($root);
-    }
-    return $url;
+    return url($val, [], $suffix, $domain) . ($vars ? '?' . http_build_query($vars) : '');
 }
 
 /**

@@ -95,8 +95,14 @@ define(['jquery', 'bootstrap', 'toastr', 'layer', 'lang'], function ($, undefine
                 return url;
             },
             //获取修复后可访问的cdn链接
-            cdnurl: function (url) {
-                return /^(?:[a-z]+:)?\/\//i.test(url) ? url : Config.upload.cdnurl + url;
+            cdnurl: function (url, domain) {
+                var rule = new RegExp("^((?:[a-z]+:)?\\/\\/|data:image\\/)", "i");
+                var url = rule.test(url) ? url : Config.upload.cdnurl + url;
+                if (domain && !rule.test(url)) {
+                    domain = typeof domain === 'string' ? domain : location.origin;
+                    url = domain + url;
+                }
+                return url;
             },
             //查询Url参数
             query: function (name, url) {
@@ -104,7 +110,7 @@ define(['jquery', 'bootstrap', 'toastr', 'layer', 'lang'], function ($, undefine
                     url = window.location.href;
                 }
                 name = name.replace(/[\[\]]/g, "\\$&");
-                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                var regex = new RegExp("[?&/]" + name + "([=/]([^&#/?]*)|&|#|$)"),
                     results = regex.exec(url);
                 if (!results)
                     return null;
@@ -114,10 +120,10 @@ define(['jquery', 'bootstrap', 'toastr', 'layer', 'lang'], function ($, undefine
             },
             //打开一个弹出窗口
             open: function (url, title, options) {
-                title = title ? title : "";
+                title = options && options.title ? options.title : (title ? title : "");
                 url = Fast.api.fixurl(url);
                 url = url + (url.indexOf("?") > -1 ? "&" : "?") + "dialog=1";
-                var area = [$(window).width() > 800 ? '800px' : '95%', $(window).height() > 600 ? '600px' : '95%'];
+                var area = Fast.config.openArea != undefined ? Fast.config.openArea : [$(window).width() > 800 ? '800px' : '95%', $(window).height() > 600 ? '600px' : '95%'];
                 options = $.extend({
                     type: 2,
                     title: title,
