@@ -18,7 +18,7 @@ return [
     // 应用命名空间
     'app_namespace'          => 'app',
     // 应用调试模式
-    'app_debug'              => Env::get('app.debug', false),
+    'app_debug'              => Env::get('app.debug', true),
     // 应用Trace
     'app_trace'              => Env::get('app.trace', false),
     // 应用模式状态
@@ -42,7 +42,7 @@ return [
     // 默认时区
     'default_timezone'       => 'PRC',
     // 是否开启多语言
-    'lang_switch_on'         => true,
+    'lang_switch_on'         => false,
     // 默认全局过滤方法 用逗号分隔多个
     'default_filter'         => '',
     // 默认语言
@@ -260,9 +260,9 @@ return [
         //是否开启前台会员中心
         'usercenter'          => true,
         //登录验证码
-        'login_captcha'       => true,
+        'login_captcha'       => FALSE,
         //登录失败超过10次则1天后重试
-        'login_failure_retry' => true,
+        'login_failure_retry' => FALSE,
         //是否同一账号同一时间只能在一个地方登录
         'login_unique'        => false,
         //登录页默认背景图
