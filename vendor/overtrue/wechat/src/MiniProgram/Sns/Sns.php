@@ -10,7 +10,6 @@
  */
 
 /**
- * User.php.
  *
  * Part of Overtrue\WeChat.
  *

@@ -42,7 +42,7 @@ return [
     // 默认时区
     'default_timezone'       => 'PRC',
     // 是否开启多语言
-    'lang_switch_on'         => false,
+    'lang_switch_on'         => true,
     // 默认全局过滤方法 用逗号分隔多个
     'default_filter'         => '',
     // 默认语言
@@ -260,9 +260,9 @@ return [
         //是否开启前台会员中心
         'usercenter'          => true,
         //登录验证码
-        'login_captcha'       => FALSE,
+        'login_captcha'       => false,
         //登录失败超过10次则1天后重试
-        'login_failure_retry' => FALSE,
+        'login_failure_retry' => true,
         //是否同一账号同一时间只能在一个地方登录
         'login_unique'        => false,
         //登录页默认背景图
@@ -272,7 +272,7 @@ return [
         //自动检测更新
         'checkupdate'         => false,
         //版本号
-        'version'             => '1.0.0.20190410_beta',
+        'version'             => '1.0.0.20190510_beta',
         //API接口地址
         'api_url'             => 'https://api.fastadmin.net',
     ],

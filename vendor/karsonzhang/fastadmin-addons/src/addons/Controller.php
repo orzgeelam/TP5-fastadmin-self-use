@@ -128,8 +128,7 @@ class Controller extends \think\Controller
             //检测是否登录
             if (!$this->auth->isLogin())
             {
-                // $this->error(__('Please login first'), 'index/user/login');
-	            $this->redirect('index/user/login');
+                $this->error(__('Please login first'), 'index/user/login');
             }
             // 判断是否需要验证权限
             if (!$this->auth->match($this->noNeedRight))

@@ -52,8 +52,7 @@ class Index extends Backend
     {
         $url = $this->request->get('url', 'index/index');
         if ($this->auth->isLogin()) {
-            // $this->success(__("You've logged in, do not login again"), $url);
-	        $this->redirect($url);
+            $this->success(__("You've logged in, do not login again"), $url);
         }
         if ($this->request->isPost()) {
             $username = $this->request->post('username');
@@ -110,8 +109,7 @@ class Index extends Backend
     {
         $this->auth->logout();
         Hook::listen("admin_logout_after", $this->request);
-        // $this->success(__('Logout successful'), 'index/login');
-	    $this->redirect('index/login');
+        $this->success(__('Logout successful'), 'index/login');
     }
 
 }

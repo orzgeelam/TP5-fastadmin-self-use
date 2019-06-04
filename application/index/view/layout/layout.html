@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+	{include file="layout/head" /}
+	<title>{$meta_title}</title>
+	{block name='style'}{/block}
+</head>
+<body>
+<section class="wrap">
+	{block name="footer"}
+	{/block}
+	{block name="main"}
+	{/block}
+</section>
+{block name="weixin"}
+{include file="layout/weixin" /}
+{/block}
+{block name="script"}
+{/block}
+</body>
+</html>

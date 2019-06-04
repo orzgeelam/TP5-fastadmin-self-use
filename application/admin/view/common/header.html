@@ -25,39 +25,21 @@
 						<i class="fa fa-trash"></i>
 					</a>
 					<ul class="dropdown-menu wipecache">
-						<li>
-							<a href="javascript:;" data-type="all">
-								<i class="fa fa-trash"></i>
-								{:__('Wipe all cache')}
-							</a>
-						</li>
+						<li><a href="javascript:;" data-type="all"><i class="fa fa-trash"></i> {:__('Wipe all
+							cache')}</a></li>
 						<li class="divider"></li>
-						<li>
-							<a href="javascript:;" data-type="content">
-								<i class="fa fa-file-text"></i>
-								{:__('Wipe content cache')}
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;" data-type="template">
-								<i class="fa fa-file-image-o"></i>
-								{:__('Wipe template cache')}
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;" data-type="addons">
-								<i class="fa fa-rocket"></i>
-								{:__('Wipe addons cache')}
-							</a>
-						</li>
+						<li><a href="javascript:;" data-type="content"><i class="fa fa-file-text"></i> {:__('Wipe
+							content cache')}</a></li>
+						<li><a href="javascript:;" data-type="template"><i class="fa fa-file-image-o"></i> {:__('Wipe
+							template cache')}</a></li>
+						<li><a href="javascript:;" data-type="addons"><i class="fa fa-rocket"></i> {:__('Wipe addons
+							cache')}</a></li>
 					</ul>
 				</li>
 				<!-- 多语言列表 -->
 				{if $Think.config.lang_switch_on}
 				<li class="hidden-xs">
-					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="fa fa-language"></i>
-					</a>
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language"></i></a>
 					<ul class="dropdown-menu">
 						<li class="{$config['language']=='zh-cn'?'active':''}">
 							<a href="?ref=addtabs&lang=zh-cn">简体中文</a>
@@ -86,26 +68,16 @@
 						<!-- Menu Footer-->
 						<li class="user-footer">
 							<div class="pull-left">
-								<a href="general/profile" class="btn btn-primary addtabsit">
-									<i class="fa fa-user"></i>
-									{:__('Profile')}
-								</a>
+								<a href="general/profile" class="btn btn-primary addtabsit"><i class="fa fa-user"></i>
+									{:__('Profile')}</a>
 							</div>
 							<div class="pull-right">
-								<a href="{:url('index/logout')}" class="btn btn-danger">
-									<i class="fa fa-sign-out"></i>
-									{:__('Logout')}
-								</a>
+								<a href="{:url('index/logout')}" class="btn btn-danger"><i class="fa fa-sign-out"></i>
+									{:__('Logout')}</a>
 							</div>
 						</li>
 					</ul>
 				</li>
-				<!-- 控制栏切换按钮 -->
-				<!--<li class="hidden-xs">
-					<a href="javascript:;" data-toggle="control-sidebar">
-						<i class="fa fa-gears"></i>
-					</a>
-				</li>-->
 			</ul>
 		</div>
 	</div>
@@ -117,14 +89,18 @@
 			<li role="presentation" id="tab_{$fixedmenu.id}" class="{:$referermenu?'':'active'}">
 				<a href="#con_{$fixedmenu.id}" node-id="{$fixedmenu.id}" aria-controls="{$fixedmenu.id}" role="tab" data-toggle="tab">
 					<i class="fa fa-dashboard fa-fw"></i>
-					<span>{$fixedmenu.title}</span> <span class="pull-right-container"> </span></a>
+					<span>{$fixedmenu.title}</span>
+					<span class="pull-right-container"> </span>
+				</a>
 			</li>
 			{/if}
 			{if $referermenu}
 			<li role="presentation" id="tab_{$referermenu.id}" class="active">
 				<a href="#con_{$referermenu.id}" node-id="{$referermenu.id}" aria-controls="{$referermenu.id}" role="tab" data-toggle="tab">
 					<i class="fa fa-list fa-fw"></i>
-					<span>{$referermenu.title}</span> <span class="pull-right-container"> </span></a>
+					<span>{$referermenu.title}</span>
+					<span class="pull-right-container"> </span>
+				</a>
 				<i class="close-tab fa fa-remove"></i>
 			</li>
 			{/if}

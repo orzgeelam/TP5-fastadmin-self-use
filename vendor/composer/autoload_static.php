@@ -4,11 +4,11 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit93719bb1aa6fa692188d6b4db5c12d54
+class ComposerStaticInit2537a12e3b63e265e25ee9e73315e195
 {
     public static $files = array (
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
@@ -72,9 +72,9 @@ class ComposerStaticInit93719bb1aa6fa692188d6b4db5c12d54
         '883af48563631547925fa4c3b48ead07' => __DIR__ . '/..' . '/markbaker/complex/classes/src/operations/multiply.php',
         'f190e3308e6ca23234a2875edc985c03' => __DIR__ . '/..' . '/markbaker/complex/classes/src/operations/divideby.php',
         'ac9e33ce6841aa5bf5d16d465a2f03a7' => __DIR__ . '/..' . '/markbaker/complex/classes/src/operations/divideinto.php',
+        '488987c28e9b5e95a1ce6b6bcb94606c' => __DIR__ . '/..' . '/karsonzhang/fastadmin-addons/src/common.php',
         '9e090711773bfc38738f5dbaee5a7f14' => __DIR__ . '/..' . '/overtrue/wechat/src/Payment/helpers.php',
         '1cfd2761b63b0a29ed23657ea394cb2d' => __DIR__ . '/..' . '/topthink/think-captcha/src/helper.php',
-        '488987c28e9b5e95a1ce6b6bcb94606c' => __DIR__ . '/..' . '/karsonzhang/fastadmin-addons/src/common.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -144,8 +144,8 @@ class ComposerStaticInit93719bb1aa6fa692188d6b4db5c12d54
         ),
         'think\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/thinkphp/library/think',
-            1 => __DIR__ . '/..' . '/karsonzhang/fastadmin-addons/src',
+            0 => __DIR__ . '/..' . '/karsonzhang/fastadmin-addons/src',
+            1 => __DIR__ . '/../..' . '/thinkphp/library/think',
         ),
         'Symfony\\Polyfill\\Php70\\' => 
         array (
@@ -271,10 +271,10 @@ class ComposerStaticInit93719bb1aa6fa692188d6b4db5c12d54
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit93719bb1aa6fa692188d6b4db5c12d54::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit93719bb1aa6fa692188d6b4db5c12d54::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit93719bb1aa6fa692188d6b4db5c12d54::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit93719bb1aa6fa692188d6b4db5c12d54::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit2537a12e3b63e265e25ee9e73315e195::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit2537a12e3b63e265e25ee9e73315e195::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit2537a12e3b63e265e25ee9e73315e195::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit2537a12e3b63e265e25ee9e73315e195::$classMap;
 
         }, null, ClassLoader::class);
     }

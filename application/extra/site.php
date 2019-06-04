@@ -1,7 +1,7 @@
 <?php
 
 return array (
-  'name' => 'FastAdmin',
+  'name' => '刘恒记',
   'beian' => '',
   'cdnurl' => '',
   'version' => '1.0.1',
@@ -12,12 +12,13 @@ return array (
     'backend' => 'zh-cn',
     'frontend' => 'zh-cn',
   ),
-  'fixedpage' => 'general/config',
+  'fixedpage' => 'dashboard',
   'configgroup' => 
   array (
     'basic' => 'Basic',
     'email' => 'Email',
     'dictionary' => 'Dictionary',
+    'user' => 'User',
   ),
   'mail_type' => '1',
   'mail_smtp_host' => 'smtp.qq.com',
